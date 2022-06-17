@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    a(href='/motos') Volver
+    br
+    br
+    h1 Nueva Moto
+    br
+    br
+    form(action='/motos/crear' method='post')
+        label(for='id') ID:
+        input#id(type='text' name='id' value=moto.id disabled='')
+        br
+        label(for='color') Color:
+        input#color(type='text' name='color' value=moto.color)
+        br
+        label(for='modelo') Modelo:
+        input#modelo(type='text' name='modelo' value=moto.modelo)
+        br
+        label(for='latitud') Latitud:
+        input#latitud(type='text' name='latitud' value=moto.ubicacion[0])
+        br
+        label(for='Longitud') Longitud:
+        input#longitud(type='text' name='longitud' value=moto.ubicacion[0])
+        br
+        br
+        input.btn(type='submit'  value='OK')

@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+    a(href='/motos/crear') Nueva Moto
+    
+    table.table
+        thead
+            tr 
+                th(scope='col') #
+                th(scope='col') Color
+                th(scope='col') Modelo
+                th(scope='col') Ubicacion
+                th(scope='col')
+                th(scope='col')
+
+        tbody 
+            each moto in motos
+                tr
+                    td(scope='row')=moto.id 
+                    td=moto.color
+                    td=moto.modelo
+                    td=moto.ubicacion
+                    td 
+                        a(href='motos/'+moto.id+'/actualizar') Editar
+                    td
+                        from.inline(method='post' action='motos/'+moto.id+'/eliminar')
+                            input(type='hidden' name='id'  value=moto.id)
+                            button.link-button(type='submit' name='submit_param' value='submit_value' class='btn')
+                                ='Eliminar'
