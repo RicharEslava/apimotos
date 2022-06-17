@@ -1,0 +1,22 @@
+{
+  "name": "apinode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://1005064580@bitbucket.org/1005064580/apinode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/1005064580/apinode/issues"
+  },
+  "homepage": "https://bitbucket.org/1005064580/apinode#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
